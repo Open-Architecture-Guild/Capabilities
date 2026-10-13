@@ -45,10 +45,10 @@ This repository is organized in a clean, folder-based hierarchy.
 
 ```text
 ├── 01-core-capabilities/
-│   ├── sales-management.yaml
-│   ├── sales-management/
-│   │   ├── lead-generation.yaml
-│   │   └── deal-closing.yaml
+│   ├── 010-sales-management.yaml
+│   ├── 010-sales-management/
+│   │   ├── 011-lead-generation.yaml
+│   │   └── 012-deal-closing.yaml
 ├── 02-management-capabilities/
 └── 03-enabling-capabilities/
 ```

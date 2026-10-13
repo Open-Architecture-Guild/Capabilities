@@ -1,0 +1,55 @@
+name: "Quality & Architecture Issue"
+description: "Report a structural flaw, MECE overlap, naming violation, or missing metadata in the capability map."
+title: "[Quality]: "
+labels: ["quality"]
+type: "bug"
+body:
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: "Type of Quality Issue"
+      description: "What kind of architectural or structural problem are you reporting?"
+      options:
+        - "MECE Violation (Functional overlap or redundancy between capabilities)"
+        - "Naming Convention Violation (Does not follow Verb + Noun format)"
+        - "Incomplete Metadata (Missing description, KPIs, or strategic outcome)"
+        - "Hierarchical Misplacement (Wrong Domain or Sub-Domain level)"
+        - "Other Data Quality Issue"
+    validations:
+      required: true
+
+  - type: input
+    id: target_capability_id
+    attributes:
+      label: "Affected Capability ID(s)"
+      description: "Provide the unique ID (e.g., CAP-FIN-0101) of the affected node(s)."
+      placeholder: "e.g., CAP-FIN-0101"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: "Description of the Problem"
+      description: "Explain clearly what is wrong with the current definition, structure, or mapping."
+      placeholder: "This capability overlaps with... / The name violates the Verb + Noun rule because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "Proposed Correction or Improvement"
+      description: "How should this be fixed? (e.g., rename, merge with another capability, or split)."
+      placeholder: "Suggest a better name, merge path, or structural adjustment..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF-CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

@@ -1,0 +1,23 @@
+# Level 3: Capability Template
+capability:
+  id: "CAP-FIN-0101"
+  name: "Manage Accounts Payable"
+  parent_id: "CAP-FIN-010"
+
+  description: >
+    Encompasses the systematic tracking, processing, and settlement of supplier
+    invoices and financial obligations to ensure vendor satisfaction and cash flow accuracy.
+
+  # Strategischer Bezug
+  strategic_alignment:
+    primary_business_outcome: >
+      Optimize working capital and strengthen vendor relationships
+
+  # Verknüpfungen (Architektur-Mapping)
+  relations:
+    depends_on:
+      - "CAP-FIN-0102 (Manage General Ledger)"
+    kpis:
+      - "KPI-0001" # Average invoice processing time
+      - "KPI-0002" # Cost per invoice processed
+      - "KPI-0003" # Early-payment discount capture rate

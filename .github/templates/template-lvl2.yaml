@@ -1,0 +1,9 @@
+# Level 2: Group (Sub-Domain) Template
+group:
+  id: "CAP-FIN-010"
+  name: "Financial Accounting & Operations"
+  parent_id: "CAP-FIN-01"
+
+  description: >
+    Covers the transactional financial operations, including general ledger management,
+    accounts payable, and accounts receivable workflows.

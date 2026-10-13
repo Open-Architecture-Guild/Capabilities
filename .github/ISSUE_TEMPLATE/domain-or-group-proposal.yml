@@ -1,0 +1,60 @@
+name: "Domain or Group Proposal (Level 1 & 2)"
+description: "Propose a new high-level Enterprise Domain or Sub-Domain (Group)."
+title: "[Domain/Group]: "
+labels: ["structure"]
+type: "enhancement"
+body:
+  - type: dropdown
+    id: level
+    attributes:
+      label: "Hierarchy Level"
+      description: "Are you proposing a top-level pillar or a functional grouping?"
+      options:
+        - "Level 1: Domain (Strategic Pillar, e.g., Manage Finances)"
+        - "Level 2: Group (Sub-Domain, e.g., Financial Accounting)"
+    validations:
+      required: true
+
+  - type: input
+    id: entity_name
+    attributes:
+      label: "Name"
+      description: "Name of the Domain or Group (Verb + Noun format recommended)."
+      placeholder: "e.g., Manage Finances"
+    validations:
+      required: true
+
+  - type: input
+    id: parent_domain
+    attributes:
+      label: "Parent Domain (Only required for Level 2 Groups)"
+      description: "If this is a Level 2 Group, which Level 1 Domain does it belong to?"
+      placeholder: "e.g., CAP-FIN-01 (Manage Finances)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope_description
+    attributes:
+      label: "Scope & Description"
+      description: "Describe what operational pillars or core responsibilities fall under this Domain/Group."
+      placeholder: "Encompasses all activities related to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: architectural_impact
+    attributes:
+      label: "Architectural & Strategic Rationale"
+      description: "Why is this structural addition needed from an enterprise architecture perspective?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF-CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

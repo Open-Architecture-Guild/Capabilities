@@ -1,0 +1,57 @@
+name: "Capability Proposal (Level 3)"
+description: "Propose a granular, executable Capability (Level 3)."
+title: "[Capability]: "
+labels: ["capability"]
+type: "enhancement"
+body:
+  - type: input
+    id: capability_name
+    attributes:
+      label: "Capability Name (Verb + Noun)"
+      description: "Must follow the strict Verb + Noun convention."
+      placeholder: "e.g., Manage Accounts Payable"
+    validations:
+      required: true
+
+  - type: input
+    id: parent_group
+    attributes:
+      label: "Parent Group / Sub-Domain ID"
+      description: "Which Level 2 Group does this capability belong to?"
+      placeholder: "e.g., CAP-FIN-010 (Financial Accounting)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Capability Description"
+      description: "Clear, concise definition of the capability's operational scope."
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_outcome
+    attributes:
+      label: "Strategic Business Outcome"
+      description: "What primary business value or outcome does this capability drive?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: relations
+    attributes:
+      label: "Dependencies"
+      description: "List any dependencies on other capabilities."
+      placeholder: "Depends on ..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: kpis
+    attributes:
+      label: "KPIs"
+      description: "List any relevant KPIs (see ´kpis/´)."
+      placeholder: "KPIs: ..."
+    validations:
+      required: false

@@ -1,0 +1,11 @@
+# Level 1: Domain Template
+domain:
+  id: "CAP-FIN-01"
+  name: "Manage Finances"
+  type: "Core" # Core, Management oder Enabling
+
+  description: >
+    High-level domain encompassing all financial governance, capital allocation,
+    accounting, and value-tracking activities across the enterprise.
+
+  sponsor: "Chief Financial Officer (CFO)"
